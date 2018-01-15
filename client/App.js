@@ -1,11 +1,14 @@
 import React from 'react';
-import Layout from './Layout';
-import Router from './routes/Router';
+import { Route, BrowserRouter } from 'react-router-dom';
+
+import Landing from './containers/Landing';
 
 const App = () => (
-    <Layout>
-        <Router />
-    </Layout>
+    <BrowserRouter>
+        <div>
+            <Route exact path="/" component={Landing} />
+        </div>
+    </BrowserRouter>
 );
 
 export default App;
